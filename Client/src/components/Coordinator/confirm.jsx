@@ -29,7 +29,7 @@ const ConfirmBooking = () => {
 
   const fetchBookings = async () => {
     try {
-      const res = await axios.get("http://localhost:9000/api/coordinator/bookings");
+      const res = await axios.get("https://eventum-w3x5.onrender.com/api/coordinator/bookings");
       const allBookings = res.data;
 
       // Filter bookings based on coordinator email

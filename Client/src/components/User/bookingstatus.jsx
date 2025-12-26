@@ -40,7 +40,7 @@ export default function BookingStatus() {
       return;
     }
 
-    axios.get(`http://localhost:9000/api/user/bookings/${userId}`, {
+    axios.get(`https://eventum-w3x5.onrender.com/api/user/bookings/${userId}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },

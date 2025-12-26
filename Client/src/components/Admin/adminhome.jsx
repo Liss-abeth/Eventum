@@ -112,8 +112,7 @@ const itemWidth = 300; // Or whatever width you want
   useEffect(() => {
     const fetchTestimonials = async () => {
       try {
-        const response = await axios.get('http://localhost:9000/reviews/all')
-
+        const response = await axios.get('https://eventum-w3x5.onrender.com/reviews/all');
         // Duplicate testimonials for seamless looping
         setTestimonials([...response.data, ...response.data]);
       } catch (error) {

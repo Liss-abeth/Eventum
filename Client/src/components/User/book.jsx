@@ -28,7 +28,7 @@ export default function Book() {
       status: 'pending'
     };
 
-    axios.post('http://localhost:9000/api/user/book', bookingData)
+    axios.post('https://eventum-w3x5.onrender.com/api/user/book', bookingData)
       .then((res) => {
         alert('Booking successful!');
         setShowModal(false);

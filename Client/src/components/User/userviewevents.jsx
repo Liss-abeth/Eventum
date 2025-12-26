@@ -31,7 +31,7 @@ export default function ViewUserEvents() {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await axios.get("http://localhost:9000/api/coordinator/getAll");
+      const response = await axios.get("https://eventum-w3x5.onrender.com/api/coordinator/getAll");
         setEvents(response.data);
       } catch (error) {
         console.error("Error fetching events:", error);
@@ -71,7 +71,7 @@ export default function ViewUserEvents() {
             <Card className="h-100 shadow-sm">
               <Card.Img
                 variant="top"
-                src={`http://localhost:9000/uploads/${event.Image}`}
+                src={`https://eventum-w3x5.onrender.com/uploads/${event.Image}`}
                 style={{ height: '200px', objectFit: 'cover' }}
               />
               <Card.Body>

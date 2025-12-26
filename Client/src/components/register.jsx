@@ -70,7 +70,7 @@ export default function Registration() {
             phone: record.phone.trim()
         };
 
-        axios.post('http://localhost:9000/api/user/register', trimmedRecord)
+     axios.post('https://eventum-w3x5.onrender.com/api/user/register', trimmedRecord)
             .then((res) => {
                 alert(res.data.msg || "Registered successfully");
                 if (res.status === 200) {

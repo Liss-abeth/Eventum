@@ -36,7 +36,7 @@ export default function Myevent() {
         return;
       }
 
-      const response = await axios.post("http://localhost:9000/api/coordinator/myevent", {
+      const response = await axios.post("https://eventum-w3x5.onrender.com/api/coordinator/myevent", {
         email: coordinatorEmail
       });
 
@@ -67,7 +67,7 @@ export default function Myevent() {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`http://localhost:9000/api/coordinator/editevent/${currentEvent._id}`, updatedEvent);
+      await axios.put(`https://eventum-w3x5.onrender.com/api/coordinator/editevent/${currentEvent._id}`, updatedEvent);
       setShowModal(false);
       fetchEvents();
     } catch (err) {
@@ -83,7 +83,7 @@ export default function Myevent() {
   if (!window.confirm("Are you sure you want to delete this event?")) return;
 
   try {
-    await axios.delete(`http://localhost:9000/api/coordinator/deleteevent/${eventId}`);
+    await axios.delete(`https://eventum-w3x5.onrender.com/api/coordinator/deleteevent/${eventId}`);
     fetchEvents(); // Refresh the event list
   } catch (err) {
     console.error("Error deleting event:", err);

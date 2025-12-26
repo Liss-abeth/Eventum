@@ -118,7 +118,7 @@ export default function Coordinatorhome() {
     setSuccess(null);
 
     try {
-      await axios.post('http://localhost:9000/contact/create', form);
+     await axios.post('https://eventum-w3x5.onrender.com/contact/create', form);
       setSuccess('Message sent successfully!');
       setForm({ name: '', email: '', message: '' });
     } catch (err) {
@@ -138,7 +138,7 @@ const [testimonials, setTestimonials] = useState([]);
   useEffect(() => {
     const fetchTestimonials = async () => {
       try {
-        const response = await axios.get('http://localhost:9000/reviews/all')
+        const response = await axios.get('https://eventum-w3x5.onrender.com/reviews/all')
 
         // Duplicate testimonials for seamless looping
         setTestimonials([...response.data, ...response.data]);

@@ -49,7 +49,7 @@ export default function Login() {
     if (!validateForm()) return;
 
     try {
-      const res = await axios.post('http://localhost:9000/api/user/login', {
+      const res = await axios.post('https://eventum-w3x5.onrender.com/api/user/login', {
         ...record,
         email: record.email.trim(),
         password: record.password.trim(),

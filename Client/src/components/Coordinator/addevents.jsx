@@ -62,7 +62,7 @@ export default function AddEventsMui() {
 
     try {
       await axios.post(
-        'http://localhost:9000/api/coordinator/addEvent',
+        'https://eventum-w3x5.onrender.com/api/coordinator/addEvent',
         formData,
         {
           headers: { 'Content-Type': 'multipart/form-data' },

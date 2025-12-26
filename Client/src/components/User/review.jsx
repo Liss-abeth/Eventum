@@ -18,7 +18,7 @@ const ReviewPage = () => {
   
     try {
       // Send JSON instead of FormData
-      const response = await axios.post("http://localhost:9000/reviews/add", { name, review });
+      const response = await axios.post("https://eventum-w3x5.onrender.com/reviews/add", { name, review });
 
   
       if (response.status === 201) {

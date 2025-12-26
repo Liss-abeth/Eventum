@@ -21,7 +21,7 @@ export default function ViewAdminEvents() {
 
   const fetchUsers = async () => {
     try {
-      const res = await axios.get("http://localhost:9000/api/admin/fetchUsers");
+     const res = await axios.get("https://eventum-w3x5.onrender.com/api/admin/fetchUsers");
       const filteredUsers = res.data.filter(user => user.role === "user");
       setUsers(filteredUsers);
     } catch (err) {
@@ -31,7 +31,7 @@ export default function ViewAdminEvents() {
 
   const fetchCoordinators = async () => {
     try {
-      const res = await axios.get("http://localhost:9000/api/admin/fetchCoordinator");
+      const res = await axios.get("https://eventum-w3x5.onrender.com/api/admin/fetchCoordinator");
       setCoordinators(res.data);
     } catch (err) {
       console.error("Error fetching coordinators:", err);
@@ -40,7 +40,7 @@ export default function ViewAdminEvents() {
 
   const fetchBookings = async () => {
     try {
-      const res = await axios.get("http://localhost:9000/api/admin/bookings");
+      const res = await axios.get("https://eventum-w3x5.onrender.com/api/admin/bookings");
       setBookings(res.data);
     } catch (err) {
       console.error("Error fetching bookings:", err);
@@ -49,7 +49,7 @@ export default function ViewAdminEvents() {
 
   const fetchEvents = async () => {
     try {
-      const res = await axios.get("http://localhost:9000/api/coordinator/getAll"); // Assuming this is defined
+      const res = await axios.get("https://eventum-w3x5.onrender.com/api/coordinator/getAll"); // Assuming this is defined
       setEvents(res.data);
     } catch (err) {
       console.error("Error fetching events:", err);
@@ -58,7 +58,7 @@ export default function ViewAdminEvents() {
 
   const deleteUser = async (id) => {
   try {
-    await axios.delete(`http://localhost:9000/api/admin/admindeleteuser/${id}`);
+    await axios.delete(`https://eventum-w3x5.onrender.com/api/admin/admindeleteuser/${id}`);
     setUsers(prev => prev.filter(u => u._id !== id));
     fetchBookings();
   } catch (err) {
@@ -68,7 +68,7 @@ export default function ViewAdminEvents() {
 
   const deleteCoordinator = async (id) => {
   try {
-    await axios.delete(`http://localhost:9000/api/admin/deleteCoordinator/${id}`);
+    await axios.delete(`https://eventum-w3x5.onrender.com/api/admin/deleteCoordinator/${id}`);
     setCoordinators(prev => prev.filter(coord => coord._id !== id));
   } catch (err) {
     console.error("Error deleting coordinator:", err);
